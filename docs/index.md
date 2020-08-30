@@ -4,69 +4,129 @@ Below are the documents and links needed for Fall 2020.
 
 # 9/2	Course Introduction
 
+**Pre-class videos**: Course Introduction; Why care about Algorithms?
+
+**In class**: Walk-through of class rules; overview of various web tools we'll be using; Q&A about videos and class material.
+
 **Out**: Tentative Syllabus
 
 ## 9/7	Mathematical Frameworks
+
+**Pre-class videos**: 
+
+**In class**:
 
 **Out**: Homework Assignment #1 (Due 9/21)
 
 ## 9/14	Funamental Data Structures
 
+**Pre-class videos**: 
+
+**In class**:
+
 ## 9/21	Algorithmic Thinking
+
+**Pre-class videos**: 
+
+**In class**:
 
 **Out**: Homework Assignment #2 (Due 10/5)
 
 ## 9/28	Fundamental Algorithms 1
 
+**Pre-class videos**: 
+
+**In class**:
+
 ## 10/5	Fundamental Algorithms 2
+
+**Pre-class videos**: 
+
+**In class**:
 
 **Out**: Homework Assignment #3 (Due 10/19)
 
 ## 10/12	Writing Efficient Code 1
 
+**Pre-class videos**: 
+
+**In class**:
+
 ## 10/19	Writing Efficient Code 2
+
+**Pre-class videos**: 
+
+**In class**:
 
 **Out**: Homework Assignment #4 (Due 11/2)
 
 ## 10/26	Recursive Techniques
 
+**Pre-class videos**: 
+
+**In class**:
+
 ## 11/2	Dealing with Hard Problems
+
+**Pre-class videos**: 
+
+**In class**:
 
 **Out**: Homework Assignment #5 (Due 11/16)
 
 ## 11/9	Graph Algorithms 1
 
+**Pre-class videos**: 
+
+**In class**:
+
 ## 11/16	Graph Algorithms 2
+
+**Pre-class videos**: 
+
+**In class**:
 
 **Out**: Homework Assignment #6 (Due 11/30)
 
 ## 11/23	Imperfect Optimization
 
+**Pre-class videos**: 
+
+**In class**:
+
 _Note_: No class session on 11/26 (Thanksgiving)
 
-## 11/30	NP Completeness Theory 1
+## 11/30	NP Completeness 1
+
+**Pre-class videos**: 
+
+**In class**:
 
 **Out**: Homework Assignment #7 (Due 12/14)
 
-## 12/7	NP Completeness Theory 2
+## 12/7	NP Completeness 2
+
+**Pre-class videos**: 
+
+**In class**:
 
 ## 12/14	Review of Design Techniques / Special Topics
 
+**Pre-class videos**: 
 
-You can use the [editor on GitHub](https://github.com/mercere99/CSE-830/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+**In class**:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+**Instructor-only Links**:
+
+[editor on GitHub](https://github.com/mercere99/CSE-830/edit/master/docs/index.md)
+
 
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
 
 - Bulleted
 - List
