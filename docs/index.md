@@ -2,7 +2,9 @@
 
 Below are the documents and links needed for Fall 2020.
 
-# Week 1 (9/2)	Course Introduction
+# Week 1: Course Introduction
+
+Starting: 9/2
 
 **Pre-class videos**: Course Introduction; Why care about Algorithms?
 
@@ -10,7 +12,9 @@ Below are the documents and links needed for Fall 2020.
 
 **Out**: Tentative Syllabus
 
-## Week 2 (9/7)	Mathematical Frameworks
+## Week 2: Mathematical Frameworks
+
+Week of 9/7
 
 **Pre-class videos**: 
 
@@ -18,13 +22,17 @@ Below are the documents and links needed for Fall 2020.
 
 **Out**: Homework Assignment #1 (Due 9/21)
 
-## Week 3 (9/14)	Funamental Data Structures
+## Week 3: Funamental Data Structures
+
+Week of 9/14
 
 **Pre-class videos**: 
 
 **In class**:
 
-## Week 4 (9/21)	Algorithmic Thinking
+## Week 4: Algorithmic Thinking
+
+Week of 9/21
 
 **Pre-class videos**: 
 
@@ -32,13 +40,17 @@ Below are the documents and links needed for Fall 2020.
 
 **Out**: Homework Assignment #2 (Due 10/5)
 
-## Week 5 (9/28)	Fundamental Algorithms 1
+## Week 5: Fundamental Algorithms 1
+
+Week of 9/28
 
 **Pre-class videos**: 
 
 **In class**:
 
-## Week 6 (10/5)	Fundamental Algorithms 2
+## Week 6: Fundamental Algorithms 2
+
+Week of 10/5
 
 **Pre-class videos**: 
 
@@ -46,13 +58,17 @@ Below are the documents and links needed for Fall 2020.
 
 **Out**: Homework Assignment #3 (Due 10/19)
 
-## Week 7 (10/12)	Writing Efficient Code 1
+## Week 7: Writing Efficient Code 1
+
+Week of 10/12
 
 **Pre-class videos**: 
 
 **In class**:
 
-## Week 8 (10/19)	Writing Efficient Code 2
+## Week 8: Writing Efficient Code 2
+
+Week of 10/19
 
 **Pre-class videos**: 
 
@@ -60,13 +76,17 @@ Below are the documents and links needed for Fall 2020.
 
 **Out**: Homework Assignment #4 (Due 11/2)
 
-## Week 9 (10/26)	Recursive Techniques
+## Week 9: Recursive Techniques
+
+Week of 10/26
 
 **Pre-class videos**: 
 
 **In class**:
 
-## Week 10 (11/2)	Dealing with Hard Problems
+## Week 10:	Dealing with Hard Problems
+
+Week of 11/2
 
 **Pre-class videos**: 
 
@@ -74,13 +94,17 @@ Below are the documents and links needed for Fall 2020.
 
 **Out**: Homework Assignment #5 (Due 11/16)
 
-## Week 11 (11/9)	Graph Algorithms 1
+## Week 11:	Graph Algorithms 1
+
+Week of 11/9
 
 **Pre-class videos**: 
 
 **In class**:
 
-## Week 12 (11/16)	Graph Algorithms 2
+## Week 12: Graph Algorithms 2
+
+Week of 11/16
 
 **Pre-class videos**: 
 
@@ -88,7 +112,9 @@ Below are the documents and links needed for Fall 2020.
 
 **Out**: Homework Assignment #6 (Due 11/30)
 
-## Week 13 (11/23)	Imperfect Optimization
+## Week 13: Imperfect Optimization
+
+Week of 11/23
 
 **Pre-class videos**: 
 
@@ -96,7 +122,9 @@ Below are the documents and links needed for Fall 2020.
 
 _Note_: No class session on 11/26 (Thanksgiving)
 
-## Week 14 (11/30)	NP Completeness 1
+## Week 14: NP Completeness 1
+
+Week of 11/30
 
 **Pre-class videos**: 
 
@@ -104,13 +132,17 @@ _Note_: No class session on 11/26 (Thanksgiving)
 
 **Out**: Homework Assignment #7 (Due 12/14)
 
-## Week 15 (12/7)	NP Completeness 2
+## Week 15: NP Completeness 2
+
+Week of 12/7
 
 **Pre-class videos**: 
 
 **In class**:
 
-## Finals Week (12/14)	Review of Design Techniques / Special Topics
+## Finals Week:	Review of Design Techniques / Special Topics
+
+Week of 12/14
 
 **Pre-class videos**: 
 
