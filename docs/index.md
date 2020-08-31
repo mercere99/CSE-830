@@ -24,7 +24,7 @@ Starting: 9/2
 
 **Out**: Tentative [Syllabus](https://mercere99.github.io/CSE-830/syllabus)
 
-## Week 2: Mathematical Frameworks
+## Week 2: Analytical Frameworks
 
 Week of 9/7
 
@@ -34,7 +34,7 @@ Week of 9/7
 
 **Out**: Homework Assignment #1 (Due 9/21)
 
-## Week 3: Funamental Data Structures
+## Week 3: Data Structures
 
 Week of 9/14
 
@@ -70,7 +70,7 @@ Week of 10/5
 
 **Out**: Homework Assignment #3 (Due 10/19)
 
-## Week 7: Writing Efficient Code 1
+## Week 7: Efficient Code 1
 
 Week of 10/12
 
@@ -78,7 +78,7 @@ Week of 10/12
 
 **In class**: Review of HW2; Example Problems
 
-## Week 8: Writing Efficient Code 2
+## Week 8: Efficient Code 2
 
 Week of 10/19
 
@@ -124,7 +124,7 @@ Week of 11/16
 
 **Out**: Homework Assignment #6 (Due 11/30)
 
-## Week 13: Imperfect Optimization
+## Week 13: Inexact Optimization
 
 Week of 11/23
 
