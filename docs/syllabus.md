@@ -1,13 +1,13 @@
 # Syllabus for CSE 830: Design & Theory of Algorithms
 
-## Instructor: Charles Ofria (ofria@cse.msu.edu)
+**Instructor**: Charles Ofria (ofria@cse.msu.edu)
+
+**Meeting Time**: Tuesday/Thursday 10:20 to 11:40 (Zoom link e-mailed to students and is pinned to #general in Slack.)
+
+**Schedule & Materials**: [https://mercere99.github.io/CSE-830]
 
 ## Textbook
 There are no required textbooks for this course, but I do recommend that you have one of your choice to refer to as needed.  Good options include The Algorithm Design Manual, Second Edition by Steven Skiena, Springer, 2008, ISBN 1848000693 -or- Introduction to Algorithms, Third Edition by Cormen, Leiserson, Rivest, and Stein, McGraw Hill, 2009 ISBN 0262033844
-
-## Meeting time
-Tuesday/Thursday 10:20am-11:40am
-All meetings will be over Zoom.  The Zoom link and password will be e-mailed separately to all students and is pinned to the #general channel in the course Slack.
 
 ## Pre-reqs
 Basic fluency in at least one programming language (ideally C++ and Python), common data structures, and recursion.
