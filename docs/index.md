@@ -2,7 +2,7 @@
 
 Below are the documents and links needed for Fall 2020.
 
-**[Syllabus](https://github.com/mercere99/CSE-830/docs/syllabus)** - provides basic information about the course including how you will be graded.
+**[Syllabus](https://mercere99.github.io/CSE-830/syllabus)** - provides basic information about the course including how you will be graded.
 
 **[Slack Discussion Board](cse830.slack.com)** a place for asynchronous discussions and Q&A sessions.
 
@@ -16,9 +16,11 @@ Starting: 9/2
 
 **Pre-class videos**: Course Introduction; Why care about Algorithms?
 
+**Optional extra videos**: Instructor Bio
+
 **In class**: Walk-through of class rules; overview of the web tools we'll be using; Q&A about videos and class material.
 
-**Out**: Tentative [Syllabus](https://github.com/mercere99/CSE-830/docs/syllabus)
+**Out**: Tentative [Syllabus](https://mercere99.github.io/CSE-830/syllabus)
 
 ## Week 2: Mathematical Frameworks
 
@@ -161,30 +163,4 @@ Week of 12/14
 
 [editor on GitHub](https://github.com/mercere99/CSE-830/edit/master/docs/index.md)
 
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mercere99/CSE-830/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
