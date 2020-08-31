@@ -2,7 +2,7 @@
 
 **Instructor**: Charles Ofria (ofria@cse.msu.edu)
 
-**Meeting Time**: Tuesday/Thursday 10:20 to 11:40 (Zoom link e-mailed to students and is pinned to #general in [Slack](cse830.slack.com).)
+**Meeting Time**: Tuesday/Thursday 10:20 to 11:40 (Zoom link e-mailed to students and is pinned to #general in [Slack](https://cse830.slack.com).)
 
 **Schedule & Materials**: [https://mercere99.github.io/CSE-830](https://mercere99.github.io/CSE-830)
 

@@ -1,10 +1,12 @@
-## Documents for CSE 830: Design & Theory of Algorithms
+# Documents for CSE 830
+
+**CSE 830: Design & Theory of Algorithms**
 
 Below are the documents and links needed for Fall 2020.
 
 **[Syllabus](https://mercere99.github.io/CSE-830/syllabus)** - provides basic information about the course including how you will be graded.
 
-**[Slack Discussion Board](cse830.slack.com)** a place for asynchronous discussions and Q&A sessions.
+**[Slack Discussion Board](https://cse830.slack.com)** a place for asynchronous discussions and Q&A sessions.
 
 **Zoom** will be used for all class sessions.  The Zoom link has been e-mailed to all students and can be found pinned to the #general channel in the course Slack.
 
