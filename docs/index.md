@@ -18,7 +18,7 @@ Starting: 9/2
 
 **Pre-class videos**: [Course Introduction](https://mediaspace.msu.edu/media/t/0_tgl55f3m) (19:10); [Why Study Algorithms?](https://mediaspace.msu.edu/media/t/0_zg3ixmwy) (18:30)
 
-**Optional extra videos**: [Lightcycle Example Problem](https://mediaspace.msu.edu/media/t/0_fx7q8dzg) (7:38); Instructor Bio (coming soon)
+**Optional extra videos**: [Lightcycle Example Problem](https://mediaspace.msu.edu/media/t/0_fx7q8dzg) (7:38); [Instructor Bio](https://mediaspace.msu.edu/media/t/0_h1582gj9) (9:15)
 
 **In class**: Walk-through of class rules; overview of the web tools we'll be using; Q&A about videos and class material.
 
