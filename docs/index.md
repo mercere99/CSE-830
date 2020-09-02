@@ -16,9 +16,9 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 
 Starting: 9/2
 
-**Pre-class videos**: Course Introduction; Why care about Algorithms?
+**Pre-class videos**: [Course Introduction](https://mediaspace.msu.edu/media/t/0_tgl55f3m); [Why study Algorithms?](https://mediaspace.msu.edu/media/t/0_zg3ixmwy)
 
-**Optional extra videos**: Instructor Bio
+**Optional extra videos**: [Lightcycle Example Problem](https://mediaspace.msu.edu/media/t/0_fx7q8dzg); Instructor Bio
 
 **In class**: Walk-through of class rules; overview of the web tools we'll be using; Q&A about videos and class material.
 
