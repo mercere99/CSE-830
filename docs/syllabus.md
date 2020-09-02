@@ -15,7 +15,7 @@ Basic fluency in at least one programming language (ideally C++ and Python), com
 ## Description
 Analysis of algorithms. Algorithm design techniques. Efficient algorithms for classical problems. Intractable problems and techniques to cope with them. 
 
-## Homework Assignemnts
+## Homework Assignments
 There will be seven homework assignments, each of which will consist of programming projects, mathematical proofs, and/or short-answer questions.  You may discuss homework problems with your classmates group, but may not share code or final answers. The best way to understand the subtleties of algorithmic problems is to argue about how to solve them.  That said, please make sure to learn the material and do not just rely on your classmates to explain the solutions to you.  
 
 All assignments will be due at 11:59pm on the due date. You will lose 10% off your maximum grade per day late, to a cap of five days (and 50% off), after which it will not be accepted.  I do understand that unexpected events befall even the most dedicated student, so I will provide one free five-day extension on a single assignment without a penalty. Please do not waste this extension or feel obligated to use it; I will require a good excuse to consider giving you another extension. 
