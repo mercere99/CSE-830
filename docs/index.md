@@ -16,13 +16,13 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 
 Starting: 9/2
 
-**Pre-class videos**: [Course Introduction](https://mediaspace.msu.edu/media/t/0_tgl55f3m); [Why study Algorithms?](https://mediaspace.msu.edu/media/t/0_zg3ixmwy)
+**Pre-class videos**: [Course Introduction](https://mediaspace.msu.edu/media/t/0_tgl55f3m) (19:10); [Why Study Algorithms?](https://mediaspace.msu.edu/media/t/0_zg3ixmwy) (18:30)
 
-**Optional extra videos**: [Lightcycle Example Problem](https://mediaspace.msu.edu/media/t/0_fx7q8dzg); Instructor Bio
+**Optional extra videos**: [Lightcycle Example Problem](https://mediaspace.msu.edu/media/t/0_fx7q8dzg) (7:38); Instructor Bio (coming soon)
 
 **In class**: Walk-through of class rules; overview of the web tools we'll be using; Q&A about videos and class material.
 
-**Out**: Tentative [Syllabus](https://mercere99.github.io/CSE-830/syllabus)
+**Out**: [Syllabus](https://mercere99.github.io/CSE-830/syllabus)
 
 ## Week 2: Analytical Frameworks
 
