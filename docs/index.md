@@ -20,7 +20,7 @@ Starting: 9/2
 
 **Optional extra videos**: [Lightcycle Example Problem](https://mediaspace.msu.edu/media/t/0_fx7q8dzg) (7:38); [Instructor Bio](https://mediaspace.msu.edu/media/t/0_h1582gj9) (9:15)
 
-**In class**: Walk-through of class rules; overview of the web tools we'll be using; Q&A about videos and class material.
+**In class**: Walk-through of class rules; overview of the web tools we'll be using; Q&A about videos and class material. [In class recording](https://mediaspace.msu.edu/media/t/1_kyap98ic)
 
 **Out**: [Syllabus](https://mercere99.github.io/CSE-830/syllabus)
 
