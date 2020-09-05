@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <ctime>
 #include <fstream>
 #include <functional>
@@ -6,12 +7,19 @@
 #include <string>
 #include <vector>
 
+// Create a type for storing sort functions.  Parameters are the vector to
+// be sorted, the first position to sort, and the last position to sort+1.
+using sort_fun_t = std::function<void(std::vector<double>&, int, int)>;
+
 // A standard implementation of Insertion Sort
-void InsertionSort(std::vector<double> & v) { // N is v.size()
-    for (size_t i = 1; i < v.size(); i++) {   // Run N-1 + 1 times
+void InsertionSort(std::vector<double> & v, int start=0, int end=-1)
+{                                             // N is end - start
+    if (end == -1) end = v.size();
+
+    for (int i = start+1; i < end; i++) {     // Run N-1 + 1 times
         double key = v[i];                    // Run N-1 times
-        size_t j = i - 1;                     // Run N-1 times
-        while (j < v.size() && v[j] > key) {  // Run N-1 to N(N-1)/2 + N-1 times
+        int j = i - 1;                        // Run N-1 times
+        while (j >= start && v[j] > key) {    // Run N-1 to N(N-1)/2 + N-1 times
             v[j+1] = v[j];                    // Run 0 to N(N-1)/2 times
             --j;                              // Run 0 to N(N-1)/2 times
         }
@@ -19,19 +27,46 @@ void InsertionSort(std::vector<double> & v) { // N is v.size()
     }
 }
 
+void Merge(std::vector<double> & v, int start, int midpoint, int end) {
+    std::vector<double> merged;
+    int p1 = start;
+    int p2 = midpoint;
+    while (p1 < midpoint && p2 < end) {
+        if (v[p1] < v[p2]) { merged.push_back(v[p1++]); }
+        else { merged.push_back(v[p2++]); }
+    }
+    while (p1 < midpoint) merged.push_back(v[p1++]);
+    while (p2 < end) merged.push_back(v[p2++]);
+
+    std::copy_n(merged.begin(), merged.size(), v.begin()+start);
+}
+
+void DividedInsertionSort(std::vector<double> & v, int start=0, int end=-1)
+{
+    if (end == -1) end = v.size();
+    if (end - start < 2) return;
+
+    int midpoint = start + end / 2;
+    InsertionSort(v, start, midpoint);
+    InsertionSort(v, midpoint, end);
+
+    Merge(v, start, midpoint, end);
+}
+
+
 // A quick function to print a vector of doubles.
 void Print(const std::vector<double> & v, size_t max=(size_t)-1) {
     for (size_t i=0; i < max && i < v.size(); i++) {
-        if (i) std::cout << ',';
+        if (i) std::cout << ", ";
         std::cout << v[i];
     }
 }
 
 // Time a sorting function and return answer in seconds.
-double TimeSortFun(std::function<void(std::vector<double>&)> fun,
+double TimeSortFun(sort_fun_t fun,
                    std::vector<double> v) {
     std::clock_t start_time = std::clock();
-    fun(v);
+    fun(v, 0, v.size());
     std::clock_t total_time = std::clock() - start_time;
     return ((double) total_time) / (double) CLOCKS_PER_SEC;
 }
@@ -74,6 +109,21 @@ int main(int argc, char *argv[])
         double run_time = TimeSortFun(InsertionSort, v);
         std::cout << "InsertionSort(N=" << N << ") Total time = " << run_time << " seconds." << std::endl;
         out_file << ", " << run_time;
+
+        // Collect data on using InsertionSort.
+        run_time = TimeSortFun(DividedInsertionSort, v);
+        std::cout << "DividedInsertionSort(N=" << N << ") Total time = " << run_time << " seconds." << std::endl;
+        out_file << ", " << run_time;
+
+        // std::cout << "Unsorted: ";
+        // Print(v);
+        // std::cout << std::endl;
+
+        // DividedInsertionSort(v);
+
+        // std::cout << "Sorted:   ";
+        // Print(v);
+        // std::cout << std::endl;
 
         // Finish this line of the output file.
         out_file << std::endl;
