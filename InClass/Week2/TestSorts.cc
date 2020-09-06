@@ -46,10 +46,37 @@ void DividedInsertionSort(std::vector<double> & v, int start=0, int end=-1)
     if (end == -1) end = v.size();
     if (end - start < 2) return;
 
-    int midpoint = start + end / 2;
+    int midpoint = (start + end) / 2;
     InsertionSort(v, start, midpoint);
     InsertionSort(v, midpoint, end);
 
+    Merge(v, start, midpoint, end);
+}
+
+void MergeSort(std::vector<double> & v, int start=0, int end=-1)
+{
+    if (end == -1) end = v.size();
+
+    if (end - start < 2) return;
+
+    int midpoint = (start + end) / 2;
+    MergeSort(v, start, midpoint);
+    MergeSort(v, midpoint, end);
+    Merge(v, start, midpoint, end);
+}
+
+void HybridSort(std::vector<double> & v, int start=0, int end=-1)
+{
+    if (end == -1) end = v.size();
+
+    if (end - start < 20) {
+        InsertionSort(v, start, end);
+        return;
+    }
+
+    int midpoint = (start + end) / 2;
+    HybridSort(v, start, midpoint);
+    HybridSort(v, midpoint, end);
     Merge(v, start, midpoint, end);
 }
 
@@ -105,21 +132,70 @@ int main(int argc, char *argv[])
             val = dis(gen);
         }
 
-        // Collect data on using InsertionSort.
-        double run_time = TimeSortFun(InsertionSort, v);
-        std::cout << "InsertionSort(N=" << N << ") Total time = " << run_time << " seconds." << std::endl;
-        out_file << ", " << run_time;
+        std::vector<double> v_best(N);
+        std::vector<double> v_worst(N);
+        for (int i = 0; i < N; i++) {
+            v_best[i] = (double) i;
+            v_worst[i] = (double) N - i;
+        }
 
         // Collect data on using InsertionSort.
+        double run_time = TimeSortFun(InsertionSort, v);
+        double run_time_best = TimeSortFun(InsertionSort, v_best);
+        double run_time_worst = TimeSortFun(InsertionSort, v_worst);
+        std::cout << "InsertionSort(N=" << N << ") "
+                  << "best_time=" << run_time_best << "s"
+                  << "rand_time=" << run_time << "s"
+                  << "worst_time=" << run_time_worst << "s"
+                  << std::endl;
+        out_file << ", " << run_time_best
+                 << ", " << run_time
+                 << ", " << run_time_worst;
+
+        // Collect data on using DividedInsertionSort.
         run_time = TimeSortFun(DividedInsertionSort, v);
-        std::cout << "DividedInsertionSort(N=" << N << ") Total time = " << run_time << " seconds." << std::endl;
-        out_file << ", " << run_time;
+        run_time_best = TimeSortFun(DividedInsertionSort, v_best);
+        run_time_worst = TimeSortFun(DividedInsertionSort, v_worst);
+        std::cout << "DividedInsertionSort(N=" << N << ") "
+                  << "best_time=" << run_time_best << "s"
+                  << "rand_time=" << run_time << "s"
+                  << "worst_time=" << run_time_worst << "s"
+                  << std::endl;
+        out_file << ", " << run_time_best
+                 << ", " << run_time
+                 << ", " << run_time_worst;
+
+        // Collect data on using MergeSort.
+        run_time = TimeSortFun(MergeSort, v);
+        run_time_best = TimeSortFun(MergeSort, v_best);
+        run_time_worst = TimeSortFun(MergeSort, v_worst);
+        std::cout << "MergeSort(N=" << N << ") "
+                    << "best_time=" << run_time_best << "s"
+                    << "rand_time=" << run_time << "s"
+                    << "worst_time=" << run_time_worst << "s"
+                    << std::endl;
+        out_file << ", " << run_time_best
+                    << ", " << run_time
+                    << ", " << run_time_worst;
+
+        // Collect data on using HybridSort.
+        run_time = TimeSortFun(HybridSort, v);
+        run_time_best = TimeSortFun(HybridSort, v_best);
+        run_time_worst = TimeSortFun(HybridSort, v_worst);
+        std::cout << "HybridSort(N=" << N << ") "
+                    << "best_time=" << run_time_best << "s"
+                    << "rand_time=" << run_time << "s"
+                    << "worst_time=" << run_time_worst << "s"
+                    << std::endl;
+        out_file << ", " << run_time_best
+                    << ", " << run_time
+                    << ", " << run_time_worst;
 
         // std::cout << "Unsorted: ";
         // Print(v);
         // std::cout << std::endl;
 
-        // DividedInsertionSort(v);
+        // HybridSort(v);
 
         // std::cout << "Sorted:   ";
         // Print(v);
