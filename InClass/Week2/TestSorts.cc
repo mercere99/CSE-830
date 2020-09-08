@@ -16,14 +16,14 @@ void InsertionSort(std::vector<double> & v, int start=0, int end=-1)
 {                                             // N is end - start
     if (end == -1) end = v.size();
 
-    for (int i = start+1; i < end; i++) {     // Run N-1 + 1 times
-        double key = v[i];                    // Run N-1 times
-        int j = i - 1;                        // Run N-1 times
-        while (j >= start && v[j] > key) {    // Run N-1 to N(N-1)/2 + N-1 times
-            v[j+1] = v[j];                    // Run 0 to N(N-1)/2 times
-            --j;                              // Run 0 to N(N-1)/2 times
+    for (int i = start+1; i < end; i++) {     // Steps: N-1 + 1
+        double key = v[i];                    // Steps: N-1
+        int j = i - 1;                        // Steps: N-1
+        while (j >= start && v[j] > key) {    // Steps: N-1 to N(N-1)/2 + N-1
+            v[j+1] = v[j];                    // Steps: 0 to N(N-1)/2
+            --j;                              // Steps: 0 to N(N-1)/2
         }
-        v[j+1] = key;                         // Run N-1 times
+        v[j+1] = key;                         // Steps: N-1
     }
 }
 
