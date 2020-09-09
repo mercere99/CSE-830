@@ -14,8 +14,7 @@ using sort_fun_t = std::function<void(std::vector<double>&, int, int)>;
 // A standard implementation of Insertion Sort
 void InsertionSort(std::vector<double> & v, int start=0, int end=-1)
 {                                             // N is end - start
-    if (end == -1) end = v.size();
-
+    if (end == -1) end = v.size();            // Steps: 1
     for (int i = start+1; i < end; i++) {     // Steps: N-1 + 1
         double key = v[i];                    // Steps: N-1
         int j = i - 1;                        // Steps: N-1
