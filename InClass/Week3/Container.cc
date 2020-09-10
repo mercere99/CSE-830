@@ -111,7 +111,71 @@ public:
   bool HasCurrent() override { return cur_pos != -1; }
 };
 
-//    int first=0, last=vals.size();
+class SortedArray : public ActiveContainer {
+private:
+  std::vector<int> vals;
+  int cur_pos = -1;
+  
+public:
+  bool Search(int test_val) override {
+    // Do a binary search.
+    int first=0, last=vals.size();
+    cur_pos = last/2;
+    while (cur_pos < last) {
+      if (vals[cur_pos] == test_val) return true;    // Found it!
+      if (vals[cur_pos] > test_val) last = cur_pos;  // Search left
+      else first = cur_pos+1;                        // Search right
+      cur_pos = (first + last)/2;
+    }
+    
+    return false;
+  }
+  
+  void Insert(int in_val) override {
+    Search(in_val);                       // Find the closest position to in_val.
+    if (vals[cur_pos] < in_val) in_val++; // Make sure we have the spot AFTER it goes.
+    vals.insert(vals.begin()+cur_pos, in_val);
+  }
+  
+  void Delete() override {
+    if (cur_pos == -1) return;            // If we don't have a position, do nothing.
+    vals.erase(vals.begin()+cur_pos)
+  }
+
+  int Min() override {
+    if (vals.size() == 0) return 0;
+    cur_pos = 0;
+    return vals[0];
+  }
+  
+  int Max() override {
+    if (vals.size() == 0) return 0;
+    cur_pos = vals.size()-1;
+    return vals[cur_pos];
+  }
+  
+  int Next() override {
+    if (cur_pos < 0) return Min();
+    if (vals.size() == 0 || ++cur_pos >= vals.size()) { cur_pos = -1; return 0; }
+    return vals[cur_pos];
+  }
+  
+  int Prev() override {
+    if (cur_pos < 0) return Max();
+    if (vals.size() == 0 || cur_pos == 0) { cur_pos = -1; return 0; }
+    return vals[--cur_pos]
+  }
+  
+  int Current() override {
+    if (cur_pos == -1) return Min();
+    return vals[cur_pos];
+  }
+
+  int GetSize() override { return vals.size(); }
+
+  bool HasCurrent() override { return cur_pos != -1; }
+};
+
 
 
 template <typename T>
