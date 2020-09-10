@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <random>
 #include <vector>
 
 // A container object that hold integer values
@@ -16,9 +17,10 @@ struct ActiveContainer {
 
   virtual int Current() = 0;     // Return the current value.
   virtual int GetSize() = 0;     // Return number of values in the container.
+  virtual bool HasCurrent() = 0; // Is the current value valid?
 };
 
-class Test_UnsortedArray : public ActiveContainer {
+class UnsortedArray : public ActiveContainer {
 private:
   std::vector<int> vals;
   int cur_pos = -1;
@@ -105,10 +107,56 @@ public:
   }
 
   int GetSize() override { return vals.size(); }
+
+  bool HasCurrent() override { return cur_pos != -1; }
 };
 
 //    int first=0, last=vals.size();
 
+
+template <typename T>
+void InsertMany(T & container, const std::vector<int> & values) {
+  for (int v : values) container.Insert(v);
+}
+
+template <typename T>
+void Sort(T & container, std::vector<int> & out_values) {
+  out_values.resize(container.GetSize());
+  container.Min();
+  for (int pos = 0; pos < container.GetSize(); pos++) {
+    out_values[pos] = container.Current();
+    container.Next();
+  }
+}
+
+// A quick function to print a vector of doubles.
+template <typename T>
+void Print(const std::vector<T> & v, size_t max=(size_t)-1) {
+    for (size_t i=0; i < max && i < v.size(); i++) {
+        if (i) std::cout << ", ";
+        std::cout << v[i];
+    }
+    std::cout << std::endl;
+}
+
 int main(int argc, char *argv[])
 {
+  // Build a random-number generator for input values.
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<> dis(0.0,1000);
+
+  // Build a vector of random ints.
+  constexpr int N = 20;
+  std::vector<int> vals(N);
+  for (auto & v : vals) v = dis(gen);
+
+  Print(vals);
+
+  UnsortedArray container;
+  InsertMany(container, vals);
+  Sort(container, vals);
+
+  Print(vals);
+
 }
