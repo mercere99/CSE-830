@@ -23,16 +23,13 @@ struct ActiveContainer {
 class UnsortedArray : public ActiveContainer {
 private:
   std::vector<int> vals;
-  int cur_pos = -1;
+  std::vector<int>::iterator cur_it;
   
 public:
   bool Search(int test_val) override {
     // Check every value for a match.
-    for (int i = 0; i < vals.size(); i++) {
-      if (vals[i] == test_val) {
-	cur_pos = i;
-	return true;
-      }
+    for (cur_it = vals.begin(); cur_it != vals.end(); cur_it++) {
+      if (*cur_it == test_val) return true;
     }
     return false;
   }
@@ -42,63 +39,63 @@ public:
   }
   
   void Delete() override {
-    if (cur_pos == -1) return;            // If we don't have a position, do nothing.
-    vals[cur_pos] = vals[vals.size()-1];  // Replace removed value with final value.
-    vals.resize(vals.size()-1);           // Remove final position.
+    if (cur_it == vals.end()) return;  // If we don't have a position, do nothing (error?)
+    *cur_it = vals[vals.size()-1];     // Replace removed value with final value.
+    vals.resize(vals.size()-1);        // Remove final position.
   }
 
   int Min() override {
-    if (vals.size() == 0) return 0;
-    int min_pos = 0;
-    for (int i = 1; i < vals.size(); i++) {
-      if (vals[i] < vals[min_pos]) min_pos = i;
+    if (vals.size() == 0) return 0;    // Return 0 be default (error?)
+    std::vector<int>::iterator min_it = vals.begin();
+    for (auto it = vals.begin()+1; it != vals.end(); it++) {
+      if (*it < *min_it) min_it = it;
     }
-    cur_pos = min_pos;
-    return vals[min_pos];
+    cur_it = min_it;
+    return *min_it;
   }
   
   int Max() override {
-    if (vals.size() == 0) return 0;
-    int max_pos = 0;
-    for (int i = 1; i < vals.size(); i++) {
-      if (vals[i] >= vals[max_pos]) max_pos = i;
+    if (vals.size() == 0) return 0;    // Return 0 be default (error?)
+    std::vector<int>::iterator max_it = vals.begin();
+    for (auto it = vals.begin()+1; it != vals.end(); it++) {
+      if (*it >= *max_it) max_it = it;
     }
-    cur_pos = max_pos;
-    return vals[max_pos];
+    cur_it = max_it;
+    return *max_it;
   }
   
   int Next() override {
-    if (cur_pos == -1) return Min();
-    int next_pos = -1;
+    if (cur_it == vals.end()) return Min();
+    auto next_it = vals.end();
     // Search BEFORE cur_pos for the smallest value greater than current.
-    for (int i = 0; i < cur_pos; i++) {
-      if (vals[i] > vals[cur_pos] &&
-	        (next_pos == -1 || vals[i] < vals[next_pos])) { next_pos = i; }
+    for (auto test_it = vals.begin(); test_it != cur_it; test_it++) {
+      if (*test_it > *cur_it &&
+	        (next_it == vals.end() || *test_it < *next_it)) { next_it = test_it; }
     }
     // Search AFTER cur_pos for the smallest value greater OR EQUAL to current.
-    for (int i = cur_pos+1; i < vals.size(); i++) {
-      if (vals[i] >= vals[cur_pos] &&
-    	    (next_pos == -1 || vals[i] < vals[next_pos])) { next_pos = i; }
+    for (auto test_it = cur_it+1; test_it != vals.end(); test_it++) {
+      if (*test_it >= *cur_it &&
+    	    (next_it == vals.end() || *test_it < *next_it)) { next_it = test_it; }
     }
-    cur_pos = next_pos;
-    return next_pos == -1 ? 0 : vals[next_pos];
+    cur_it = next_it;
+    return cur_it == vals.end() ? 0 : *cur_it;
   }
   
   int Prev() override {
-    if (cur_pos == -1) return Max();
-    int prev_pos = -1;
+    if (cur_it == vals.end()) return Max();
+    auto prev_it = vals.end();
     // Search BEFORE cur_pos for the largest value less than OR EQUAL to current.
-    for (int i = 0; i < cur_pos; i++) {
-      if (vals[i] <= vals[cur_pos] &&
-      	  (prev_pos == -1 || vals[i] >= vals[prev_pos])) { prev_pos = i; }
+    for (auto test_it = vals.begin(); test_it != cur_it; test_it++) {
+      if (*test_it <= *cur_it &&
+	        (prev_it == vals.end() || *test_it >= *prev_it)) { prev_it = test_it; }
     }
     // Search AFTER cur_pos for the largest value less than current.
-    for (int i = cur_pos+1; i < vals.size(); i++) {
-      if (vals[i] < vals[cur_pos] &&
-     	    (prev_pos == -1 || vals[i] > vals[prev_pos])) { prev_pos = i; }
+    for (auto test_it = cur_it+1; test_it != vals.end(); test_it++) {
+      if (*test_it < *cur_it &&
+    	    (prev_it == vals.end() || *test_it > *prev_it)) { prev_it = test_it; }
     }
-    cur_pos = prev_pos;
-    return prev_pos == -1 ? 0 : vals[prev_pos];
+    cur_it = prev_it;
+    return prev_it == vals.end() ? 0 : *cur_it;
   }
   
   int Current() override {
@@ -108,7 +105,7 @@ public:
 
   int GetSize() override { return vals.size(); }
 
-  bool HasCurrent() override { return cur_pos != -1; }
+  bool HasCurrent() override { return cur_pos != vals.end(); }
 };
 
 class SortedArray : public ActiveContainer {
