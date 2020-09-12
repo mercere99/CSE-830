@@ -15,9 +15,9 @@ struct ActiveContainer {
   virtual int Next() = 0;        // Return the successor to the current value (and make current)
   virtual int Prev() = 0;        // Return the predecessor to the current value (and make current)
 
+  virtual bool HasCurrent() = 0; // Is the current value valid?
   virtual int Current() = 0;     // Return the current value.
   virtual int GetSize() = 0;     // Return number of values in the container.
-  virtual bool HasCurrent() = 0; // Is the current value valid?
 };
 
 class UnsortedArray : public ActiveContainer {
@@ -98,14 +98,11 @@ public:
     return prev_it == vals.end() ? 0 : *cur_it;
   }
   
-  int Current() override {
-    if (cur_pos == -1) return Min();
-    return vals[cur_pos];
-  }
+  bool HasCurrent() override { return cur_it != vals.end(); }
+
+  int Current() override { return HasCurrent() ? *cur_it : 0; }
 
   int GetSize() override { return vals.size(); }
-
-  bool HasCurrent() override { return cur_pos != vals.end(); }
 };
 
 class SortedArray : public ActiveContainer {
@@ -136,7 +133,7 @@ public:
   
   void Delete() override {
     if (cur_pos == -1) return;            // If we don't have a position, do nothing.
-    vals.erase(vals.begin()+cur_pos)
+    vals.erase(vals.begin()+cur_pos);
   }
 
   int Min() override {
@@ -160,8 +157,10 @@ public:
   int Prev() override {
     if (cur_pos < 0) return Max();
     if (vals.size() == 0 || cur_pos == 0) { cur_pos = -1; return 0; }
-    return vals[--cur_pos]
+    return vals[--cur_pos];
   }
+
+  bool HasCurrent() override { return cur_pos != -1; }
   
   int Current() override {
     if (cur_pos == -1) return Min();
@@ -169,8 +168,6 @@ public:
   }
 
   int GetSize() override { return vals.size(); }
-
-  bool HasCurrent() override { return cur_pos != -1; }
 };
 
 
