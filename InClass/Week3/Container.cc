@@ -38,22 +38,16 @@ protected:
   // Brute-force search for minimum value.
   template <typename VALS_T, typename IT_T>
   int BFMin(VALS_T & vals, IT_T & min_it) {
+    min_it = std::min_element(vals.begin(), vals.end());
     if (vals.size() == 0) return 0;    // Return 0 be default (error?)
-    min_it = vals.begin();
-    for (auto it = ++vals.begin(); it != vals.end(); it++) {
-      if (*it < *min_it) min_it = it;
-    }
     return *min_it;
   }
 
   // Brute-force search for maximum value.
   template <typename VALS_T, typename IT_T>
   int BFMax(VALS_T & vals, IT_T & max_it) {
+    max_it = std::max_element(vals.begin(), vals.end());
     if (vals.size() == 0) return 0;    // Return 0 be default (error?)
-    max_it = vals.begin();
-    for (auto it = ++vals.begin(); it != vals.end(); it++) {
-      if (*it >= *max_it) max_it = it;
-    }
     return *max_it;
   }
 
@@ -260,6 +254,30 @@ public:
   int GetSize() override { return vals.size(); }
 };
 
+class HashTable : public ActiveContainer {
+private:
+  std::unordered_multiset<int> vals;
+  std::unordered_multiset<int>::iterator cur_it;
+  
+public:
+  bool Search(int test_val) override {
+    cur_it = vals.find(test_val);
+    return cur_it != vals.end();
+  }
+  void Insert(int in_val) override {
+    cur_it = vals.insert(in_val);    // And insert it there.
+  }
+  void Delete() override { cur_it = vals.erase(cur_it); }
+
+  int Min() override { return BFMin(vals, cur_it); }
+  int Max() override { return BFMax(vals, cur_it); }
+  int Next() override { return BFNext(vals, cur_it); }
+  int Prev() override { return BFPrev(vals, cur_it); }
+  
+  bool HasCurrent() override { return cur_it != vals.end(); }
+  int Current() override { return HasCurrent() ? *cur_it : 0; }
+  int GetSize() override { return vals.size(); }
+};
 
 template <typename T>
 void InsertMany(T & container, const std::vector<int> & values) {
@@ -328,6 +346,10 @@ int main(int argc, char *argv[])
   std::cout << "\nBalancedTree:\n";
   for (auto & v : vals) v = dis(gen);
   TestContainer<BalancedTree>(vals);
+
+  std::cout << "\nHashTable:\n";
+  for (auto & v : vals) v = dis(gen);
+  TestContainer<HashTable>(vals);
 
 
 }
