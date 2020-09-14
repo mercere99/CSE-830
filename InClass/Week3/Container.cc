@@ -132,19 +132,20 @@ public:
     // Do a binary search.
     int first=0, last=vals.size();
     int cur_pos = last/2;
-    while (cur_pos < last && vals[cur_pos] == test_val) {
+    while (cur_pos < last && vals[cur_pos] != test_val) {
       if (vals[cur_pos] > test_val) last = cur_pos;  // Search left
       else first = cur_pos+1;                        // Search right
       cur_pos = (first + last)/2;
     }
     cur_it = vals.begin() + cur_pos;
     
-    return *cur_it == test_val;
+    return cur_it != vals.end() && *cur_it == test_val;
   }
   
   void Insert(int in_val) override {
     Search(in_val);                   // Find the closest position to in_val.
-    if (*cur_it < in_val) in_val++;   // Make sure we have the spot AFTER it goes.
+    // Make sure we have the spot AFTER it goes.
+    if (cur_it != vals.end() && *cur_it < in_val) cur_it++;   
     vals.insert(cur_it, in_val);
   }
   
@@ -175,6 +176,8 @@ public:
   bool HasCurrent() override { return cur_it != vals.end(); }
   int Current() override { return HasCurrent() ? *cur_it : 0; }
   int GetSize() override { return vals.size(); }
+
+  const std::vector<int> & GetVals() const { return vals; }
 };
 
 class UnsortedList : public ActiveContainer {
@@ -255,6 +258,18 @@ void Print(const std::vector<T> & v, size_t max=(size_t)-1) {
     std::cout << std::endl;
 }
 
+template <typename T>
+void TestContainer(std::vector<int> & vals)
+{
+  Print(vals);
+
+  T container;
+  InsertMany(container, vals);
+  Sort(container, vals);
+
+  Print(vals);
+}
+
 int main(int argc, char *argv[])
 {
   // Build a random-number generator for input values.
@@ -265,14 +280,22 @@ int main(int argc, char *argv[])
   // Build a vector of random ints.
   constexpr int N = 20;
   std::vector<int> vals(N);
+
+  std::cout << "UnsortedArray:\n";
   for (auto & v : vals) v = dis(gen);
+  TestContainer<UnsortedArray>(vals);
 
-  Print(vals);
+  std::cout << "\nSortedArray:\n";
+  for (auto & v : vals) v = dis(gen);
+  TestContainer<SortedArray>(vals);
 
-  UnsortedArray container;
-  InsertMany(container, vals);
-  Sort(container, vals);
+  std::cout << "\nUnsortedList:\n";
+  for (auto & v : vals) v = dis(gen);
+  TestContainer<UnsortedList>(vals);
 
-  Print(vals);
+  std::cout << "\nSortedList:\n";
+  for (auto & v : vals) v = dis(gen);
+  TestContainer<SortedList>(vals);
+
 
 }
