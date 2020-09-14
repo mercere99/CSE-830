@@ -2,6 +2,8 @@
 #include <iostream>
 #include <list>
 #include <random>
+#include <set>
+#include <unordered_set>
 #include <vector>
 
 // A container object that hold integer values
@@ -149,7 +151,7 @@ public:
     vals.insert(cur_it, in_val);
   }
   
-  void Delete() override { vals.erase(cur_it); }
+  void Delete() override { cur_it = vals.erase(cur_it); }
 
   int Min() override {
     if (vals.size() == 0) return 0;
@@ -188,7 +190,7 @@ private:
 public:
   bool Search(int test_val) override { return BFSearch(vals, cur_it, test_val); }
   void Insert(int in_val) override { vals.push_back(in_val); }
-  void Delete() override { vals.erase(cur_it); }
+  void Delete() override { cur_it = vals.erase(cur_it); }
 
   int Min() override { return BFMin(vals, cur_it); }
   int Max() override { return BFMax(vals, cur_it); }
@@ -219,7 +221,33 @@ public:
     Search(in_val);                 // Find the closest position to in_val.
     vals.insert(cur_it, in_val);    // And insert it there.
   }
-  void Delete() override { vals.erase(cur_it); }
+  void Delete() override { cur_it = vals.erase(cur_it); }
+
+  int Min() override { cur_it = vals.begin(); return *cur_it; }
+  int Max() override { cur_it = --vals.end(); return *cur_it; }
+    
+  int Next() override { return *(++cur_it); }
+  int Prev() override { return *(--cur_it); }
+  
+  bool HasCurrent() override { return cur_it != vals.end(); }
+  int Current() override { return HasCurrent() ? *cur_it : 0; }
+  int GetSize() override { return vals.size(); }
+};
+
+class BalancedTree : public ActiveContainer {
+private:
+  std::multiset<int> vals;
+  std::multiset<int>::iterator cur_it;
+  
+public:
+  bool Search(int test_val) override {
+    cur_it = vals.find(test_val);
+    return cur_it != vals.end();
+  }
+  void Insert(int in_val) override {
+    cur_it = vals.insert(in_val);    // And insert it there.
+  }
+  void Delete() override { cur_it = vals.erase(cur_it); }
 
   int Min() override { cur_it = vals.begin(); return *cur_it; }
   int Max() override { cur_it = --vals.end(); return *cur_it; }
@@ -296,6 +324,10 @@ int main(int argc, char *argv[])
   std::cout << "\nSortedList:\n";
   for (auto & v : vals) v = dis(gen);
   TestContainer<SortedList>(vals);
+
+  std::cout << "\nBalancedTree:\n";
+  for (auto & v : vals) v = dis(gen);
+  TestContainer<BalancedTree>(vals);
 
 
 }
