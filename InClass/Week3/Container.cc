@@ -305,15 +305,14 @@ void Print(const std::vector<T> & v, size_t max=(size_t)-1) {
 }
 
 template <typename T>
-void TestContainer(std::vector<int> & vals)
+void TestContainer(std::vector<int> vals, const std::string & name)
 {
-  Print(vals);
-
+  std::cout << "\n" << name << std::endl;
   T container;
   InsertMany(container, vals);
   Sort(container, vals);
 
-  Print(vals);
+  Print(vals, 40);
 }
 
 int main(int argc, char *argv[])
@@ -324,32 +323,17 @@ int main(int argc, char *argv[])
   std::uniform_int_distribution<> dis(0.0,1000);
 
   // Build a vector of random ints.
-  constexpr int N = 20;
+  constexpr int N = 40;
   std::vector<int> vals(N);
-
-  std::cout << "UnsortedArray:\n";
   for (auto & v : vals) v = dis(gen);
-  TestContainer<UnsortedArray>(vals);
 
-  std::cout << "\nSortedArray:\n";
-  for (auto & v : vals) v = dis(gen);
-  TestContainer<SortedArray>(vals);
+  std::cout << "Initial:\n";
+  Print(vals, 40);
 
-  std::cout << "\nUnsortedList:\n";
-  for (auto & v : vals) v = dis(gen);
-  TestContainer<UnsortedList>(vals);
-
-  std::cout << "\nSortedList:\n";
-  for (auto & v : vals) v = dis(gen);
-  TestContainer<SortedList>(vals);
-
-  std::cout << "\nBalancedTree:\n";
-  for (auto & v : vals) v = dis(gen);
-  TestContainer<BalancedTree>(vals);
-
-  std::cout << "\nHashTable:\n";
-  for (auto & v : vals) v = dis(gen);
-  TestContainer<HashTable>(vals);
-
-
+  TestContainer<UnsortedArray>(vals, "UnsortedArray");
+  TestContainer<SortedArray>  (vals, "SortedArray");
+  TestContainer<UnsortedList> (vals, "UnsortedList");
+  TestContainer<SortedList>   (vals, "SortedList");
+  TestContainer<BalancedTree> (vals, "BalancedTree");
+  TestContainer<HashTable>    (vals, "HashTable");
 }
