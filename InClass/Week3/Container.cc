@@ -108,64 +108,56 @@ public:
 class SortedArray : public ActiveContainer {
 private:
   std::vector<int> vals;
-  int cur_pos = -1;
+  std::vector<int>::iterator cur_it;
   
 public:
   bool Search(int test_val) override {
     // Do a binary search.
     int first=0, last=vals.size();
-    cur_pos = last/2;
-    while (cur_pos < last) {
-      if (vals[cur_pos] == test_val) return true;    // Found it!
+    int cur_pos = last/2;
+    while (cur_pos < last && vals[cur_pos] == test_val) {
       if (vals[cur_pos] > test_val) last = cur_pos;  // Search left
       else first = cur_pos+1;                        // Search right
       cur_pos = (first + last)/2;
     }
+    cur_it = vals.begin() + cur_pos;
     
-    return false;
+    return *cur_it == test_val;
   }
   
   void Insert(int in_val) override {
-    Search(in_val);                       // Find the closest position to in_val.
-    if (vals[cur_pos] < in_val) in_val++; // Make sure we have the spot AFTER it goes.
-    vals.insert(vals.begin()+cur_pos, in_val);
+    Search(in_val);                   // Find the closest position to in_val.
+    if (*cur_it < in_val) in_val++;   // Make sure we have the spot AFTER it goes.
+    vals.insert(cur_it, in_val);
   }
   
-  void Delete() override {
-    if (cur_pos == -1) return;            // If we don't have a position, do nothing.
-    vals.erase(vals.begin()+cur_pos);
-  }
+  void Delete() override { vals.erase(cur_it); }
 
   int Min() override {
     if (vals.size() == 0) return 0;
-    cur_pos = 0;
-    return vals[0];
+    cur_it = vals.begin();
+    return *cur_it;
   }
   
   int Max() override {
     if (vals.size() == 0) return 0;
-    cur_pos = vals.size()-1;
-    return vals[cur_pos];
+    cur_it = vals.end()-1;
+    return *cur_it;
   }
   
   int Next() override {
-    if (cur_pos < 0) return Min();
-    if (vals.size() == 0 || ++cur_pos >= vals.size()) { cur_pos = -1; return 0; }
-    return vals[cur_pos];
+    if (cur_it == vals.end()) return Min();
+    return *(++cur_it);
   }
   
   int Prev() override {
-    if (cur_pos < 0) return Max();
-    if (vals.size() == 0 || cur_pos == 0) { cur_pos = -1; return 0; }
-    return vals[--cur_pos];
+    if (cur_it == vals.end()) return Max();
+    return *(--cur_it);
   }
 
-  bool HasCurrent() override { return cur_pos != -1; }
+  bool HasCurrent() override { return cur_it != vals.end(); }
   
-  int Current() override {
-    if (cur_pos == -1) return Min();
-    return vals[cur_pos];
-  }
+  int Current() override { return HasCurrent() ? *cur_it : 0; }
 
   int GetSize() override { return vals.size(); }
 };
