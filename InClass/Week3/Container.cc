@@ -327,6 +327,14 @@ public:
       cur_it = Parent(cur_it);
     }
 
+    // Then check if we need to move down...
+    auto left = Left(cur_it), right = Right(cur_it);
+    while (left != vals.end()) {
+      auto max_child = (right == vals.end() || *right < *left) ? left : right;
+      if (*cur_it > *max_child) break;
+      std::swap(*cur_it, *max_child);
+      left = Left(cur_it), right = Right(cur_it);
+    }
   }
 
   int Min() override { return BFMin(vals, cur_it); }
@@ -397,4 +405,5 @@ int main(int argc, char *argv[])
   TestContainer<SortedList>   (vals, "SortedList");
   TestContainer<BalancedTree> (vals, "BalancedTree");
   TestContainer<HashTable>    (vals, "HashTable");
+  TestContainer<MaxHeap>      (vals, "MaxHeap");
 }
