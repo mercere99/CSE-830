@@ -357,11 +357,14 @@ double TimeFun( std::function<void()> fun ) {
   return ((double) total_time) / (double) CLOCKS_PER_SEC;
 }
 
+// Take a vector of values and insert them all (one at a time) into a container.
 template <typename T>
 void InsertMany(T & container, const std::vector<int> & values) {
   for (int v : values) container.Insert(v);
 }
 
+// Use a combination of Min() and a linear number of calls to Current() and Next() to
+// sort a set of values.
 template <typename T>
 void Sort(T & container, std::vector<int> & out_values) {
   out_values.resize(container.GetSize());
@@ -382,6 +385,7 @@ void Print(const std::vector<T> & v, size_t max=(size_t)-1) {
     std::cout << std::endl;
 }
 
+// Run some simple tests on a container, printing as we go.
 template <typename T>
 void TestContainer(std::vector<int> vals, const std::string & name)
 {
