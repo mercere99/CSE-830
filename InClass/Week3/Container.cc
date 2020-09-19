@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <ctime>
 #include <iostream>
 #include <list>
 #include <random>
@@ -347,6 +348,14 @@ public:
   int Current() override { return HasCurrent() ? *cur_it : 0; }
   int GetSize() override { return vals.size(); }
 };
+
+// Function to measure the time (in seconds) that it takes for another container to run.
+double TimeFun( std::function<void()> fun ) {
+  std::clock_t start_time = std::clock();
+  fun();
+  std::clock_t total_time = std::clock() - start_time;
+  return ((double) total_time) / (double) CLOCKS_PER_SEC;
+}
 
 template <typename T>
 void InsertMany(T & container, const std::vector<int> & values) {
