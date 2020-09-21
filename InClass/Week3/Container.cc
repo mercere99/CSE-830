@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <ctime>
+#include <functional>
 #include <iostream>
 #include <list>
 #include <random>
@@ -8,7 +9,7 @@
 #include <vector>
 
 // A container object that hold integer values
-struct ActiveContainer {
+struct BaseContainer {
   virtual bool Search(int) = 0;  // Find a value; make current if found; return success
   virtual void Insert(int) = 0;  // Insert a new value an make it current.
   virtual void Delete() = 0;     // Remove the current value.
@@ -93,7 +94,7 @@ protected:
   }
 };
 
-class UnsortedArray : public ActiveContainer {
+class UnsortedArray : public BaseContainer {
 private:
   std::vector<int> vals;
   std::vector<int>::iterator cur_it;
@@ -119,7 +120,7 @@ public:
   int GetSize() override { return vals.size(); }
 };
 
-class SortedArray : public ActiveContainer {
+class SortedArray : public BaseContainer {
 private:
   std::vector<int> vals;
   std::vector<int>::iterator cur_it;
@@ -177,7 +178,7 @@ public:
   const std::vector<int> & GetVals() const { return vals; }
 };
 
-class UnsortedList : public ActiveContainer {
+class UnsortedList : public BaseContainer {
 private:
   std::list<int> vals;
   std::list<int>::iterator cur_it;
@@ -199,7 +200,7 @@ public:
 };
 
 
-class SortedList : public ActiveContainer {
+class SortedList : public BaseContainer {
 private:
   std::list<int> vals;
   std::list<int>::iterator cur_it;
@@ -229,7 +230,7 @@ public:
   int GetSize() override { return vals.size(); }
 };
 
-class BalancedTree : public ActiveContainer {
+class BalancedTree : public BaseContainer {
 private:
   std::multiset<int> vals;
   std::multiset<int>::iterator cur_it;
@@ -255,7 +256,7 @@ public:
   int GetSize() override { return vals.size(); }
 };
 
-class HashTable : public ActiveContainer {
+class HashTable : public BaseContainer {
 private:
   std::unordered_multiset<int> vals;
   std::unordered_multiset<int>::iterator cur_it;
@@ -280,7 +281,7 @@ public:
   int GetSize() override { return vals.size(); }
 };
 
-class MaxHeap : public ActiveContainer {
+class MaxHeap : public BaseContainer {
 private:
   using iterator = std::vector<int>::iterator;
   
