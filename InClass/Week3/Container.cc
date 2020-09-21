@@ -9,7 +9,8 @@
 #include <vector>
 
 // A container object that hold integer values
-struct BaseContainer {
+class BaseContainer {
+public:
   virtual bool Search(int) = 0;  // Find a value; make current if found; return success
   virtual void Insert(int) = 0;  // Insert a new value an make it current.
   virtual void Delete() = 0;     // Remove the current value.
@@ -23,6 +24,11 @@ struct BaseContainer {
   virtual bool HasCurrent() = 0; // Is the current value valid?
   virtual int Current() = 0;     // Return the current value.
   virtual int GetSize() = 0;     // Return number of values in the container.
+
+  // Take a vector of values and insert them all (one at a time).
+  virtual void InsertMany(const std::vector<int> & values) {
+    for (int v : values) Insert(v);
+  }
 
 protected:
   // Helper functions
@@ -118,6 +124,10 @@ public:
   bool HasCurrent() override { return cur_it != vals.end(); }
   int Current() override { return HasCurrent() ? *cur_it : 0; }
   int GetSize() override { return vals.size(); }
+
+  void InsertMany(const std::vector<int> & in_vals) override {
+    vals.insert(vals.end(), in_vals.begin(), in_vals.end());
+  }
 };
 
 class SortedArray : public BaseContainer {
@@ -176,6 +186,19 @@ public:
   int GetSize() override { return vals.size(); }
 
   const std::vector<int> & GetVals() const { return vals; }
+
+  void InsertMany(const std::vector<int> & in_vals) override {
+    // If the new values will dominate, insert them all and THEN sort.
+    if (in_vals.size() > vals.size()) {
+      vals.insert(vals.end(), in_vals.begin(), in_vals.end());
+      std::sort(vals.begin(), vals.end());
+    }
+
+    // Otherwise keep sorted and just insert one at a time.
+    else {
+      for (int v : in_vals) Insert(v);
+    }
+  }
 };
 
 class UnsortedList : public BaseContainer {
@@ -302,6 +325,7 @@ private:
     int id = (ToID(it) - 1) / 2;
     return vals.begin() + id;
   }
+
 public:
   bool Search(int test_val) override { return BFSearch(vals, cur_it, test_val); }
   void Insert(int in_val) override {
@@ -348,6 +372,11 @@ public:
   bool HasCurrent() override { return cur_it != vals.end(); }
   int Current() override { return HasCurrent() ? *cur_it : 0; }
   int GetSize() override { return vals.size(); }
+
+  void InsertMany(const std::vector<int> & in_vals) override {
+    vals.insert(vals.end(), in_vals.begin(), in_vals.end());
+    std::make_heap(vals.begin(), vals.end());
+  }
 };
 
 // Function to measure the time (in seconds) that it takes for another container to run.
@@ -356,12 +385,6 @@ double TimeFun( std::function<void()> fun ) {
   fun();
   std::clock_t total_time = std::clock() - start_time;
   return ((double) total_time) / (double) CLOCKS_PER_SEC;
-}
-
-// Take a vector of values and insert them all (one at a time) into a container.
-template <typename T>
-void InsertMany(T & container, const std::vector<int> & values) {
-  for (int v : values) container.Insert(v);
 }
 
 // Use a combination of Min() and a linear number of calls to Current() and Next() to
@@ -392,7 +415,7 @@ void TestContainer(std::vector<int> vals, const std::string & name)
 {
   std::cout << "\n" << name << std::endl;
   T container;
-  InsertMany(container, vals);
+  container.InsertMany(vals);
   Sort(container, vals);
 
   Print(vals, 40);
