@@ -54,21 +54,37 @@ void TestContainer(std::vector<int> vals, const std::string & name)
 {
   std::cout << "\n" << name << std::endl;
   T container;
-  container.InsertMany(vals);
-  Sort(container, vals);
+  double insert_time = TimeFun( [&container,&vals](){ container.InsertMany(vals); } );
+  double sort_time = TimeFun( [&container,&vals](){ Sort(container, vals); } );
 
+  double delete_max_time = TimeFun( [&container,&vals](){
+    for (size_t i = 0; i < container.GetSize()/10; ++i) {
+      container.Max(); container.Delete();
+    }
+  } );
+
+  std::cout << "Times -"
+            << " Insert: " << insert_time
+            << " SortedOutput:" << sort_time
+            << " DeleteMax:" << delete_max_time
+            << std::endl;
   Print(vals, 40);
 }
 
 int main(int argc, char *argv[])
 {
+  if (argc != 2) {
+    std::cerr << "Invalid arguments.\n Format: " << argv[0] << " [N]" << std::endl;
+    exit(1);
+  }
+
   // Build a random-number generator for input values.
   std::random_device rd;
   std::mt19937 gen(rd());
-  std::uniform_int_distribution<> dis(0.0,1000);
+  std::uniform_int_distribution<> dis(0.0,10000);
 
   // Build a vector of random ints.
-  constexpr int N = 40;
+  int N = atoi(argv[1]);
   std::vector<int> vals(N);
   for (auto & v : vals) v = dis(gen);
 
