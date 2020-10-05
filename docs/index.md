@@ -166,7 +166,7 @@ Week of 9/21
 
 **Out**: Homework Assignment #2 (Due 10/5)
 
-# Week 5: Fundamental Algorithms 1
+## Week 5: Fundamental Algorithms 1
 
 Week of 9/28
 
@@ -198,7 +198,7 @@ Week of 9/28
 
 **In class**: Review of HW1; Practice Greedy Problems; Building custom data structures.
 
-## Week 6: Fundamental Algorithms 2
+# Week 6: Fundamental Algorithms 2
 
 Week of 10/5
 
