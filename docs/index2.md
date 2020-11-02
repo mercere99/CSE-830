@@ -14,10 +14,10 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 
 ## Week 1: [Course Introduction](Week1)
 
-[Course Introduction](https://mediaspace.msu.edu/media/t/0_tgl55f3m) (19:11)
-[Why Study Algorithms?](https://mediaspace.msu.edu/media/t/0_zg3ixmwy) (18:29)
-Optional: [Lightcycle Example Problem](https://mediaspace.msu.edu/media/t/0_fx7q8dzg) (7:39)
-Optional: [Instructor Bio](https://mediaspace.msu.edu/media/t/0_h1582gj9) (9:14)
+* [Course Introduction](https://mediaspace.msu.edu/media/t/0_tgl55f3m) (19:11)
+* [Why Study Algorithms?](https://mediaspace.msu.edu/media/t/0_zg3ixmwy) (18:29)
+* Optional: [Lightcycle Example Problem](https://mediaspace.msu.edu/media/t/0_fx7q8dzg) (7:39)
+* Optional: [Instructor Bio](https://mediaspace.msu.edu/media/t/0_h1582gj9) (9:14)
 
 ## Week 2: Analytical Frameworks
 
