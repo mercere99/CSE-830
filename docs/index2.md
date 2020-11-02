@@ -108,13 +108,8 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 
 # Week 10:	Dealing with Hard Problems
 
-Week of 11/2
+* [Calculating edit distance with dynamic programming](https://mediaspace.msu.edu/media/Calculating+edit+distance+with+dynamic+programming/1_wh122oiu) (18:23)
 
-**Pre-class videos**: Complex Dynamic Programming Techinuqes; Brute-Force Approaches to Problem Solving; Branch & Bound Techniques; Polynomial-Time Optimizations on Exponential Algorithms
-
-**In class**: Example Problems
-
-**Out**: Homework Assignment #5 (Due 11/16)
 
 ## Week 11:	Graph Algorithms 1
 
