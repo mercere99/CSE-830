@@ -87,7 +87,7 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 * [Useful Python Features Tour](https://mediaspace.msu.edu/media/Useful+Python+Features+Tour/1_w2l2w6it) (12:29)
 * [Generators in Python](https://mediaspace.msu.edu/media/Generators+in+Python/1_thz84ji4) (7:09)
 
-# Week 8: [Efficient Code 2](Week8)
+## Week 8: [Efficient Code 2](Week8)
 
 * [Bits in C++](https://mediaspace.msu.edu/media/Lecture+8.1+-+Bits+in+C%2B%2B/1_ddrl2spa) (21:15)
 * [Compile-Time Optimizations in C++](https://mediaspace.msu.edu/media/Lecture+8.2+-+Compile+Time+Optimizations+in+C%2B%2B/1_k7wfo9ki) (14:05)
@@ -98,15 +98,15 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 * Optional: [Profiling Python Code](https://mediaspace.msu.edu/media/Profiling+Python+Code/1_03l5zmva) (15:29)
 * Optional: [Profiling C++ Code](https://mediaspace.msu.edu/media/Profiling+C%2B%2B+Code/1_9ayvptx2) (5:50)
 
-## Week 9: Recursive Techniques
+## Week 9: [Recursive Techniques](Week9)
 
-Week of 10/26
+* [5 Simple Steps for Solving Any Recusive Problem](https://youtu.be/ngCos392W4w) (21:02)
 
-**Pre-class videos**: The Intuition behind Recursive Algorithms ; Introduction to Dynamic Programming ; Dynamic Programming vs. Memoization
+* [Introduction to Dynamic Programming](https://mediaspace.msu.edu/media/Introduction+to+Dynamic+Programming/1_ciu0tjo0) (11:14)
+* [When to use Dynamic Programming](https://mediaspace.msu.edu/media/When+to+use+Dynamic+Programming/1_546dm0to/179816172) (16:01)
 
-**In class**: Review of HW3; Example Problems
 
-## Week 10:	Dealing with Hard Problems
+# Week 10:	Dealing with Hard Problems
 
 Week of 11/2
 
