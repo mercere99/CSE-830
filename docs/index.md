@@ -106,7 +106,7 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 * [When to use Dynamic Programming](https://mediaspace.msu.edu/media/When+to+use+Dynamic+Programming/1_546dm0to/179816172) (16:01)
 
 
-# Week 10:	Dealing with Hard Problems
+# Week 10: [Dealing with Hard Problems](Week10)
 
 * [Calculating edit distance with dynamic programming](https://mediaspace.msu.edu/media/Calculating+edit+distance+with+dynamic+programming/1_wh122oiu) (18:23)
 
