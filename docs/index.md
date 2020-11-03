@@ -110,6 +110,9 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 
 * [Calculating edit distance with dynamic programming](https://mediaspace.msu.edu/media/Calculating+edit+distance+with+dynamic+programming/1_wh122oiu) (18:23)
 
+* [Brute-Force Chess Algorithm](https://mediaspace.msu.edu/media/Lecture+10.1+-+Brute+Force+Chess/1_vd653vl4) (14:46)
+* [Brute-Force Knapsack Algorithm](https://mediaspace.msu.edu/media/Lecture+10.2+-+Brute+Force+Knapsack/1_7dvv3x8y) (14:16)
+
 
 ## Week 11:	Graph Algorithms 1
 
