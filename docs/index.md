@@ -121,6 +121,9 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 
 * [Introduction to Graph-Theory Terminology](https://mediaspace.msu.edu/media/Introduction+to+Graph+Terminology+and+Representations/1_yedryrlb) (12:52)
 
+* [Graph Traversal](https://mediaspace.msu.edu/media/Lecture+11.2+-+Graph+Traversal.mp4/1_paq2g37h) (18:40)
+* [Topological Sorting](https://mediaspace.msu.edu/media/Lecture+11.3+-+Topological+Sorting.mp4/1_esws6bt2) (9:27)
+* [Finding Articulation Verticies](https://mediaspace.msu.edu/media/Lecture+11.4+-+Articulation+Vertices.mp4/1_vvv8rpui) (9:56)
 
 ## Week 12: Graph Algorithms 2
 
