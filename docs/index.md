@@ -106,21 +106,21 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 * [When to use Dynamic Programming](https://mediaspace.msu.edu/media/When+to+use+Dynamic+Programming/1_546dm0to/179816172) (16:01)
 
 
-# Week 10: [Dealing with Hard Problems](Week10)
+## Week 10: [Dealing with Hard Problems](Week10)
 
 * [Calculating edit distance with dynamic programming](https://mediaspace.msu.edu/media/Calculating+edit+distance+with+dynamic+programming/1_wh122oiu) (18:23)
 
 * [Brute-Force Chess Algorithm](https://mediaspace.msu.edu/media/Lecture+10.1+-+Brute+Force+Chess/1_vd653vl4) (14:46)
 * [Brute-Force Knapsack Algorithm](https://mediaspace.msu.edu/media/Lecture+10.2+-+Brute+Force+Knapsack/1_7dvv3x8y) (14:16)
 
+* [Bin Packing Optimization: Memory Management](https://mediaspace.msu.edu/media/Lecture+10.ps1+-+Bin+Packing+Optimization+-+memory+managment/1_nihnrnal) (22:06)
+* [Bin Packing Optimization: Caching small results](https://mediaspace.msu.edu/media/Lecture+10.ps2+-+Bin+Packing+Optimization+-+caching+partial+results/1_f2md4coe) (30:53)
 
-## Week 11:	Graph Algorithms 1
 
-Week of 11/9
+# Week 11: [Graph Algorithms 1](Week11)
 
-**Pre-class videos**: Graph Algorithm Overview; Representing and Manipulation Graphs; Traversing Graphs
+* [Introduction to Graph-Theory Terminology](https://mediaspace.msu.edu/media/Introduction+to+Graph+Terminology+and+Representations/1_yedryrlb) (12:52)
 
-**In class**: HW4 Review; Example Problems
 
 ## Week 12: Graph Algorithms 2
 
