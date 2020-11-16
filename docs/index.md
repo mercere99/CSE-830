@@ -117,7 +117,7 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 * [Bin Packing Optimization: Caching small results](https://mediaspace.msu.edu/media/Lecture+10.ps2+-+Bin+Packing+Optimization+-+caching+partial+results/1_f2md4coe) (30:53)
 
 
-# Week 11: [Graph Algorithms 1](Week11)
+## Week 11: [Graph Algorithms 1](Week11)
 
 * [Introduction to Graph-Theory Terminology](https://mediaspace.msu.edu/media/Introduction+to+Graph+Terminology+and+Representations/1_yedryrlb) (12:52)
 
@@ -125,15 +125,11 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 * [Topological Sorting](https://mediaspace.msu.edu/media/Lecture+11.3+-+Topological+Sorting.mp4/1_esws6bt2) (9:27)
 * [Finding Articulation Verticies](https://mediaspace.msu.edu/media/Lecture+11.4+-+Articulation+Vertices.mp4/1_vvv8rpui) (9:56)
 
-## Week 12: Graph Algorithms 2
+# Week 12: [Graph Algorithms 2](Week12)
 
-Week of 11/16
-
-**Pre-class videos**: A survey of Graph Algorithms ; Brute-Force Graph Algorithms
-
-**In class**: Example Problems
-
-**Out**: Homework Assignment #6 (Due 11/30)
+* [Minimum Spanning Trees](https://mediaspace.msu.edu/media/Minimum+Spanning+Tree+Algorithms+%28Prim%27s+Algorithm+and+Kruskal%27s+Algorithm%29/1_rk9doklt) (9:07)
+* [Dijkstra's Algorithm - Shortest Paths](https://mediaspace.msu.edu/media/Dijkstra%27s+Algorithm/1_x6gop7ai) (4:10)
+* [PageRank](https://mediaspace.msu.edu/media/PageRank/1_xyglr0nk) (7:40)
 
 ## Week 13: Inexact Optimization
 
