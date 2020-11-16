@@ -1,6 +1,6 @@
 **CSE 830: Design & Theory of Algorithms**
 
-# Documents for CSE 830 - Week 10
+# Documents for CSE 830 - Week 11
 
 Starting: 11/2
 
