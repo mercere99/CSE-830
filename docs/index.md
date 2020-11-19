@@ -131,6 +131,8 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 * [Dijkstra's Algorithm - Shortest Paths](https://mediaspace.msu.edu/media/Dijkstra%27s+Algorithm/1_x6gop7ai) (4:10)
 * [PageRank](https://mediaspace.msu.edu/media/PageRank/1_xyglr0nk) (7:40)
 
+* [Brute Force Graph Algorithm Example](https://mediaspace.msu.edu/media/Lecture+12.4+-+Brute+Force+Graph+Algorithm+Example/1_ooouotnd) (21:05)
+
 ## Week 13: Inexact Optimization
 
 Week of 11/23
