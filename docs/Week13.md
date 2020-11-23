@@ -1,8 +1,9 @@
 **CSE 830: Design & Theory of Algorithms**
 
 # Documents for CSE 830 - Week 13
+## Inexact Optimization
 
-Starting: 11/16
+Starting: 11/23
 
 ## Videos for Tuesday Nov 24th
 

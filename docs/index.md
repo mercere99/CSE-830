@@ -133,7 +133,7 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 
 * [Brute Force Graph Algorithm Example](https://mediaspace.msu.edu/media/Lecture+12.4+-+Brute+Force+Graph+Algorithm+Example/1_ooouotnd) (21:05)
 
-# Week 13: Inexact Optimization
+# Week 13: [Inexact Optimization](Week13)
 
 * [Heuristics](https://mediaspace.msu.edu/media/Lecture+13.1+-+Heuristics/1_l85435of) (14:19)
 * [Approximation Algorithms](https://mediaspace.msu.edu/media/Lecture+13.2+-+Approximation+Algorithms/1_owfbegsc) (12:47)
