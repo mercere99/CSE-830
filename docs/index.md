@@ -125,7 +125,7 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 * [Topological Sorting](https://mediaspace.msu.edu/media/Lecture+11.3+-+Topological+Sorting.mp4/1_esws6bt2) (9:27)
 * [Finding Articulation Verticies](https://mediaspace.msu.edu/media/Lecture+11.4+-+Articulation+Vertices.mp4/1_vvv8rpui) (9:56)
 
-# Week 12: [Graph Algorithms 2](Week12)
+## Week 12: [Graph Algorithms 2](Week12)
 
 * [Minimum Spanning Trees](https://mediaspace.msu.edu/media/Minimum+Spanning+Tree+Algorithms+%28Prim%27s+Algorithm+and+Kruskal%27s+Algorithm%29/1_rk9doklt) (9:07)
 * [Dijkstra's Algorithm - Shortest Paths](https://mediaspace.msu.edu/media/Dijkstra%27s+Algorithm/1_x6gop7ai) (4:10)
@@ -133,13 +133,10 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 
 * [Brute Force Graph Algorithm Example](https://mediaspace.msu.edu/media/Lecture+12.4+-+Brute+Force+Graph+Algorithm+Example/1_ooouotnd) (21:05)
 
-## Week 13: Inexact Optimization
+# Week 13: Inexact Optimization
 
-Week of 11/23
-
-**Pre-class videos**: Heuristics & Approximation Algorithms; Evolutionary Computation; Search Spaces and Fitness Landscapes
-
-**In class**: HW5 Review; Example Problems
+* [Heuristics](https://mediaspace.msu.edu/media/Lecture+13.1+-+Heuristics/1_l85435of) (14:19)
+* [Approximation Algorithms](https://mediaspace.msu.edu/media/Lecture+13.2+-+Approximation+Algorithms/1_owfbegsc) (12:47)
 
 _Note_: No class session on 11/26 (Thanksgiving)
 
