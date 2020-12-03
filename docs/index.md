@@ -133,22 +133,20 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 
 * [Brute Force Graph Algorithm Example](https://mediaspace.msu.edu/media/Lecture+12.4+-+Brute+Force+Graph+Algorithm+Example/1_ooouotnd) (21:05)
 
-# Week 13: [Inexact Optimization](Week13)
+## Week 13: [Inexact Optimization](Week13)
 
 * [Heuristics](https://mediaspace.msu.edu/media/Lecture+13.1+-+Heuristics/1_l85435of) (14:19)
 * [Approximation Algorithms](https://mediaspace.msu.edu/media/Lecture+13.2+-+Approximation+Algorithms/1_owfbegsc) (12:47)
 
 _Note_: No class session on 11/26 (Thanksgiving)
 
-## Week 14: NP Completeness 1
+# Week 14: [NP Completeness 1](Week 14)
 
-Week of 11/30
+* [P, NP, and NP-Complete Problems](https://mediaspace.msu.edu/media/P%2C+NP%2C+and+NP-Complete+Problems/1_nsopui43) (14:41)
 
-**Pre-class videos**: P, NP, and NP-Completeness; Identifying NP-Complete Problems
+* [Proving NP Completeness](https://mediaspace.msu.edu/media/Proving+NP+Completeness/1_tl78gstp) (19:57)
+* [Proving that Integer Programming is NP-Complete](https://mediaspace.msu.edu/media/Proving+that+Integer+Programming+is+NP-Complete/1_0j1vkmvw) (9:02)
 
-**In class**: Example Problems
-
-**Out**: Homework Assignment #7 (Due 12/14)
 
 ## Week 15: NP Completeness 2
 
