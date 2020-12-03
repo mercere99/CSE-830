@@ -140,7 +140,7 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 
 _Note_: No class session on 11/26 (Thanksgiving)
 
-# Week 14: [NP Completeness 1](Week 14)
+# Week 14: [NP Completeness 1](Week14)
 
 * [P, NP, and NP-Complete Problems](https://mediaspace.msu.edu/media/P%2C+NP%2C+and+NP-Complete+Problems/1_nsopui43) (14:41)
 
