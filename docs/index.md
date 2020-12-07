@@ -140,7 +140,7 @@ Below are the week-by-week topics that will be covered.  Links will be added at 
 
 _Note_: No class session on 11/26 (Thanksgiving)
 
-# Week 14: [NP Completeness 1](Week14)
+## Week 14: [NP Completeness 1](Week14)
 
 * [P, NP, and NP-Complete Problems](https://mediaspace.msu.edu/media/P%2C+NP%2C+and+NP-Complete+Problems/1_nsopui43) (14:41)
 
@@ -148,13 +148,12 @@ _Note_: No class session on 11/26 (Thanksgiving)
 * [Proving that Integer Programming is NP-Complete](https://mediaspace.msu.edu/media/Proving+that+Integer+Programming+is+NP-Complete/1_0j1vkmvw) (9:02)
 
 
-## Week 15: NP Completeness 2
+# Week 15: [NP Completeness 2](Week15)
 
-Week of 12/7
+* [NP-Completeness Proof for Independent Set](https://mediaspace.msu.edu/media/Lecture+15.1+-+Independent+Set+NPC+Proof/1_1ufsvps4) (17:59)
+* [More NP-Completeness Proofs](https://mediaspace.msu.edu/media/Lecture+15.2+-+More+NPC+Proofs.mp4/1_xbojvxw5) (17:58)
 
-**Pre-class videos**: Advanced NP-Completeness Proofs; Cook's Theorem
 
-**In class**: HW 6 Review; Example Problems
 
 ## Finals Week:	Review of Design Techniques / Special Topics
 
@@ -164,9 +163,3 @@ Week of 12/14
 
 **In class**: Discussion about algorithms, course, and future changes.
 
-
-**Instructor-only Links**:
-
-[editor on GitHub](https://github.com/mercere99/CSE-830/edit/master/docs/index.md)
-
-[GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
