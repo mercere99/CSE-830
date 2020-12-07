@@ -1,7 +1,7 @@
 **CSE 830: Design & Theory of Algorithms**
 
 # Documents for CSE 830 - Week 14
-## Intruduction to P, NP, and NP-Completeness
+## Introduction to P, NP, and NP-Completeness
 
 Starting: 11/30
 
