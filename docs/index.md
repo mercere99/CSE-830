@@ -153,7 +153,8 @@ _Note_: No class session on 11/26 (Thanksgiving)
 * [NP-Completeness Proof for Independent Set](https://mediaspace.msu.edu/media/Lecture+15.1+-+Independent+Set+NPC+Proof/1_1ufsvps4) (17:59)
 * [More NP-Completeness Proofs](https://mediaspace.msu.edu/media/Lecture+15.2+-+More+NPC+Proofs.mp4/1_xbojvxw5) (17:58)
 
-
+* [NP-Completeness Proof for Hamiltonian Cycle (and Traveling Salesman)](https://mediaspace.msu.edu/media/Lecture+15.3+-+Hamiltonian+Cycle+NPC+Proof/1_3fpm431y) (15:29)
+* [The Cook-Levin Theorem for Proving SAT is the Hardest Problem in NP](https://www.youtube.com/watch?v=dKS4iDWQVnI&list=PLS4py2LeEJNDzezHTc0G3EsttsoKWQhGz) (14:17 - across 6 short videos)
 
 ## Finals Week:	Review of Design Techniques / Special Topics
 
